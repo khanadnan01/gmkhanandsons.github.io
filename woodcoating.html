@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>GM Khan & Sons Wood Coatings</title>
+    <link rel="icon" href="./img/logo.png">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text&display=swap" rel="stylesheet">
+    
+    <!-- font-awesome cdn link start -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <!-- font-awesome cnd link end -->
+    
+    <!-- bootstrap cdn link start -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- bootstrap cdn link end -->
+    
+    <!-- js link start -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <!-- js link end -->
+</head>
+<body>
+    <style>
+        .bg {
+            background-image: url("./img/backimg20.png");
+            height: 65vh; 
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        h1{
+            color: rgb(30, 30, 125);
+            font-weight: bold;
+        }
+        h4{
+            color: rgb(30, 30, 125);
+        }
+        .hr{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .card{
+            margin-top: 7rem;
+            margin-left: 4rem;
+            box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+        }
+        .card:hover {
+            box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.661);
+            cursor: -webkit-grabbing; cursor: grabbing;
+            transition: 0.3s;
+        }
+        .card-img{
+            position: relative;
+            bottom: 20%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* margin-top: 5rem; */
+        }
+        .cc{
+            position: relative;
+            bottom: 50%;
+        }
+        .ccc{
+            position: relative;
+            bottom: 40%;
+        }
+        .form{
+            box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+            cursor: pointer;
+            border-radius: 1%;
+            background-color: rgba(210, 206, 206, 0.349);
+        }
+        .btn input{
+            border-radius: 15%;
+            background-color: rgba(221, 17, 78, 0.911);
+            padding-left: 10px;
+            padding-right: 10px;
+            padding-top: 8px;
+            padding-bottom: 6px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            color: white;
+        }
+        .btn input:hover{
+            box-shadow: 2px 2px 2px black;
+        }
+
+        .reveal{
+            position: relative;
+            transform: translateY(350px);
+            opacity: 0;
+            transition: all 2s ease;
+        }
+        .reveal.active{
+            transform: translate(0px);
+            opacity: 1;
+        }
+        .reveal{
+            position: relative;
+            transform: translateY(250px);
+            opacity: 0;
+            transition: all 1s ease;
+        }
+        .reveal.active{
+            transform: translate(0px);
+            opacity: 1;
+        }
+        body{
+            color: black;
+        }
+        .change:hover{
+            cursor: pointer;
+            background-color: gray;
+            color: white;
+        }
+        .heading{
+            font-family: 'Libre Caslon Text', serif;
+            font-weight: bold;
+            background-color: rgba(249, 244, 244, 0.741);
+            cursor: pointer;
+            color: black;
+        }
+        .heading:hover{
+            background-color: black;
+            color: white;
+        }
+        .head{
+            display: flex;
+        }
+        .head p a{
+            text-decoration: none;
+            color: black;
+        }
+        .fb i{
+            color: rgb(23, 88, 228);
+        }
+        .ig i{
+            color: rgb(168, 24, 65);
+        }
+        .wa i{
+            color: rgb(16, 130, 16);
+        }
+        .tt i{
+            color: rgb(0, 162, 255);
+        }
+        nav{
+            background-color: rgba(232, 237, 230, 0.515);
+        }
+        .navbar-nav li a{
+            text-decoration: none;
+        }
+        .dropdown-menu li p{
+            text-align: center;
+            font-weight: bold;
+            color: rgb(254, 254, 254);
+        }
+        .dropdown-menu li a{
+            text-decoration: none;
+            color: whitesmoke;
+            /* background-color: rgba(0, 0, 0, 0.334); */
+        }
+        .dropdown-menu{
+            background-color: rgba(0, 0, 0, 0.49);
+        }
+        .mainnn{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .ffbtn button{
+            background-color: rgb(221, 17, 78);
+            border-radius: 15%;
+            padding-left: 10px;
+            padding-right: 10px;
+            padding-top: 8px;
+            padding-bottom: 6px;
+        }
+        .ffbtn button a{
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            font-size: 1.2rem;
+            padding: 5px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+        .ffbtn button:hover{
+            /* background-color: aqua; */
+            color: white;
+            box-shadow: 3px 3px 3px 3px gray;
+        }
+        .ffbtn button a:hover{
+            color: white;
+        }
+        .ficon a i{
+            color: rgb(219, 60, 129);
+            margin-right: 10px;
+            margin-top: 8px;
+        }
+        .ficon a i:hover{
+            color: rgb(3, 227, 247);
+            border-radius: 10%;
+            box-shadow: 3px 3px 3px 3px;
+        }
+        .faddr p a{
+            text-decoration: none;
+            color: white;
+        }
+        .faddr p a:hover{
+            color: rgb(0, 183, 255);
+        }
+        .fp p a{
+            text-decoration: none;
+            color: white;
+        }
+        .fhr{
+            display: flex;
+            justify-content: center;
+        }
+        .create{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .create a{
+            text-decoration: none;
+            color: white;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        span{
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+    </style>
+
+
+
+    <!-- <div class="head">
+        <p class="text-dark fw-bold w-75 ms-2 fs-6">
+            Best Construction & Remodeling Services-General Contractor
+        </p>    
+        <p class=" w-25 fw-bold text-end">
+            <a class="me-3" href="#location">Location</a>
+            <a class="me-3 ms-4 fs-5 fb" href="https://www.facebook.com/profile.php?id=100040118042577&mibextid=ZbWKwL"><i class="fa-brands fa-facebook"></i></a>
+            <a class="me-3 fs-5 ig" href="https://instagram.com/khanjavaid24?igshid=MzRlODBiNWFlZA=="><i class="fa-brands fa-instagram"></i></a>
+            <a class="me-3 fs-5 tt" href=""><i class="fa-brands fa-twitter"></i></a>
+            <a class="me-3 fs-5 wa" href="https://wa.me/919797987774?text=(%20G%20M%20Khan%20%26%20Sons%20)%0AWelcome%20%F0%9F%98%8AExcited%20to%20have%20you%20onboard.%20Let's%20connect%2C%20share%2C%20and%20grow%20together!%22%0A%0A%0A%0A%0A"><i class="fa-brands fa-whatsapp"></i></a>
+        </p>
+    </div> -->
+    
+    <div class="head">
+        <p class="text-dark fw-bold w-75 ms-2 fs-6">
+            Best Construction & Remodeling Services-General Contractor
+        </p>    
+        <p class=" w-25 fw-bold text-end">
+            <a class="me-3" href="#location">Location</a>
+            <a class="me-3 ms-4 fs-5 fb" href="https://www.facebook.com/profile.php?id=100040118042577&mibextid=ZbWKwL"><i class="fa-brands fa-facebook"></i></a>
+            <a class="me-3 fs-5 ig" href="https://instagram.com/khanjavaid24?igshid=MzRlODBiNWFlZA=="><i class="fa-brands fa-instagram"></i></a>
+            <a class="me-3 fs-5 tt" href=""><i class="fa-brands fa-twitter"></i></a>
+            <a class="me-3 fs-5 wa" href="https://wa.me/919797987774?text=(%20G%20M%20Khan%20%26%20Sons%20)%0AWelcome%20%F0%9F%98%8AExcited%20to%20have%20you%20onboard.%20Let's%20connect%2C%20share%2C%20and%20grow%20together!%22%0A%0A%0A%0A%0A"><i class="fa-brands fa-whatsapp"></i></a>
+        </p>
+    </div>
+    
+    <nav class="navbar navbar-expand-md navbar-light text-dark  sticky-top">
+        <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#mynav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+       <h1 data-text="GM Khan & Sons" class="heading fs-1 fw-bold">
+            GM Khan & Sons
+       </h1>
+        <div id="mynav" class="navbar-collapse collapse justify-content-end">
+            <ul class="navbar-nav dropdown mt-3 down">
+                <li class="nav-item me-3">
+
+                    <button class="nav-link dropdown-toggle btn  text-dark" data-bs-toggle="dropdown">
+                        PAINTS & PRODUCTS
+                    </button>
+
+                    <ul class="dropdown-menu down">
+                        <li>
+                            <p>
+                                Interior Wall Paints
+                            </p>
+                        </li>
+                        <li>
+                            <a href="./imp.html" class="dropdown-item">Impressions Kashmir</a>
+                        </li>
+                        <li>
+                            <a href="impuhd.html" class="dropdown-item">Impression Ultra HD</a>
+                        </li>
+                        <li>
+                            <a href="./imphd.html" class="dropdown-item">Nerolac Impressions HD</a>
+                        </li>
+
+                        <li>
+                            <p class="mt-2">
+                                Metal Enamel Paints
+                            </p>
+                        </li>
+                        <li>
+                            <a href="./puenamel.html" class="dropdown-item">Nerolac PU Enamel 10 in 1</a>
+                        </li>
+                        <li>
+                            <a href="synthetic.html" class="dropdown-item">Nerolac Synthetic Hi-Gloss Enamel</a>
+                        </li>
+                        <li>
+                            <a href="satinenamel.html" class="dropdown-item">Nerolac Satin Enamel</a>
+                        </li>
+
+                        <li>
+                            <p class="mt-2">
+                                Exterior Wall Paints
+                            </p>
+                        </li>
+                        <li>
+                            <a href="exceleverlast.html" class="dropdown-item">Nerolac Excel Everlast 12</a>
+                        </li>
+                        <li>
+                            <a href="exceltopguard.html" class="dropdown-item">Nerolac Excel Top Guard</a>
+                        </li>
+                        <li>
+                            <a href="exceltotal.html" class="dropdown-item">Nerolac Excel Total</a>
+                        </li>
+
+                        <li>
+                            <p class="mt-2">
+                                Wood Coatings
+                            </p>
+                        </li>
+                        <li>
+                            <a href="wondereoodexterior.html" class="dropdown-item">Wonderwood 2K PU Exterior</a>
+                        </li>
+                        <li>
+                            <a href="wonderwoodinter.html" class="dropdown-item">Wonderwood 2K PU Interior</a>
+                        </li>
+                        <li>
+                            <a href="melmine.html" class="dropdown-item">Wonderwood Melmine</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="me-3">
+                    <button class="nav-link  btn text-dark">
+                       <a class="text-dark" href="nxtgen.html" style="text-decoration: none;">NXTGEN SERVICES</a>
+                    </button>
+                </li>
+
+                <li class="nav-item me-3">
+                    <button class="nav-link  btn text-dark">
+                        <a class="text-dark" href="blog.html" style="text-decoration: none;">BLOG</a >
+                    </button>
+                </li>
+
+                <li class="nav-item">
+                    <a href="form.html" class="nav-link text-dark me-3 fw-bold">Sign in</a>
+                </li>
+                <li class="nav-item">
+                    <a href="form.html" class="nav-link text-dark me-3 fw-bold">Login</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- home start -->
+    <div class="bg img-fluid">
+        <h1 class="text-center fw-bold" style="color: white; font-size: 4rem; background-color: rgba(0, 0, 0, 0.416);">
+            Wood Coatings...
+        </h1> 
+    </div>
+
+    <!-- main start -->
+
+    <div class="container-fluid" style="margin-top: 4.5rem;">
+        <div class="row">
+            <div class="text-center">
+                <h1>
+                    Explore our Range of Wood coatings...
+                </h1>   
+                <div class="mainnn">
+                    <p class=" w-75">
+                        Wood is an excellent material for home décor, but it requires periodic maintenance to keep its natural look. Wood paint is the best way to protect your wood from stains and scratches. Whether you are planning on painting your living room or a dining space, there is something for everyone. Whether you need a natural colour to accent with the wood accents in your home or office, or if you want a sophisticated and elegant look, Nerolac has the perfect product for you.
+                    </p>
+                </div>
+                <div class="hr">
+                    <hr class="w-50">
+                </div>
+            </div>
+        </div>
+
+        <div class="row head justify-content-center reveal" style="margin-top: 5rem;">
+            <div class="card col-md-3 col-sm-3 main">
+                <div class="card-img">
+                    <img class="img-fluid" src="./img/11img1.png" alt="">
+                </div>
+                <div class="card-body text-center">
+                    <h4 class="cc">
+                       Wonderwood 2K PU Exterior...
+                    </h4>
+                    <p class="ccc">
+                        <span class="fw-bold">
+                            Wonderwood2K PU Exterior
+                        </span><br>
+                        A two component polyurethane wood coating finish specially formulated to have weather resistant, light fastness & non yellowing properties in all seasons.
+                    </p>
+                </div>
+            </div>
+            <div class="card col-md-3 col-sm-3 main">
+                <div class="card-img">
+                    <img class="img-fluid" src="./img/12img1.png" alt="">
+                </div>
+                <div class="card-body text-center">
+                    <h4 class="cc">
+                        Wonderwood 2K PU Interior...
+                    </h4>
+                    <p class="ccc">
+                        <span class="fw-bold">
+                            Wonderwood 2K PU Interior
+                        </span> <br>
+                        A luxurious two component polyurethane wood coating finish specially formulated to protect the interior wooden furniture.
+                    </p>
+                </div>
+            </div>
+            <div class="card col-md-3 col-sm-3 main">
+                <div class="card-img">
+                    <img class="img-fluid" src="./img/13img1.png" alt="">
+                </div>
+                <div class="card-body text-center">
+                    <h4 class="cc">
+                        Wonderwood Melmine...
+                    </h4>
+                    <p class="ccc">
+                        <span class="fw-bold">
+                            Wonderwood Melmine
+                        </span> <br>
+                        A two component acid catalyzed wood finish paint that provides tough & durable coating on all kinds of wood, veneer & medium density fiber board.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="row head justify-content-center reveal">
+            <div class="card col-md-3 col-sm-3 main">
+                <div class="card-img">
+                    <img class="img-fluid" src="./img/22img1.png" alt="">
+                </div>
+                <div class="card-body text-center">
+                    <h4 class="cc">
+                        Wonderwood Clear Acrylic Lacquer...
+                    </h4>
+                    <p class="ccc">
+                        <span class="fw-bold">
+                            WonderwoodClear Lacquer
+                        </span> <br>
+                        A NC free wood lacquer paint which offers water clear film with a unique finish which can be applied by brushing & Spraying on all kinds of wood.
+                    </p>
+                </div>
+            </div>
+            <div class="card col-md-3 col-sm-3 main">
+                <div class="card-img">
+                    <img class="img-fluid" src="./img/22img2.png" alt="">
+                </div>
+                <div class="card-body text-center">
+                    <h4 class="cc">
+                        Wonderwood 1K PU Clear...
+                    </h4>
+                    <p class="ccc">
+                        <span class="fw-bold">
+                            Wonderwood1K PU
+                        </span> <br>
+                        A single pack brushable wood finish paint based on urethane modified resin which offers natural look to wood & protects it from water, termite stains and normal handling.         
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- main end -->
+
+    <!-- form start -->
+    <div class="container-fluid text-center form w-75  reveal" style="margin-top: 6rem;">
+        <form action="https://formspree.io/f/xvojzrbk" method="POST">
+            <div class="row">
+                <h1 class="mt-3">
+                    Paint your life’s canvas with our painting experts
+                </h1>
+                <p>
+                    Fill the form below to book a free site evaluation by Nerolac Nxtgen Painting Service expert
+                </p>
+                <div class="hr">
+                    <hr class="w-75">
+                </div>
+            </div>
+            <div class="row justify-content-center mt-3">
+
+                <div class="col-md-2 col-sm-2">
+                    <input id="name" type="text" name="name"  placeholder="Full Name*" class="form-control p-2">
+                </div>
+
+                <div class="col-md-2 col-sm-2">
+                    <input id="number" type="number" name="number" placeholder="Mobile*" class="form-control p-2">
+                </div>
+
+                <div class="col-md-2 col-md-2">
+                    <input id="city" type="text" name="city" placeholder="City*" class="form-control ">
+                </div>
+
+                <div class="col-md-2 col-sm-2">
+                    <input id="email" type="email" name="email" placeholder="Email*" class="form-control p-2">
+                </div>
+
+                <div class="col-md-2 col-sm-2">
+                    <input id="area" type="number" name="pin code" placeholder="Pin Code*" class="form-control">
+               </div>
+               
+                <div class="col-md-12 col-sm-12 text-center mt-4 mb-3 btn">
+                    <input class="fs-5 p-2 ps-3 pe-3" type="submit"  name="submit" value="Submit">
+                </div>
+            </div>
+        </form>
+    </div>
+    <!-- form end -->
+
+        <!-- footer section start -->
+
+        <div class="container-fluid pt-4 reveal" style="margin-top: 8rem; background-color: #070585;">
+            <div class="row">
+                <div class="col-md-9">
+                    <h1 class="text-light" style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
+                       | Notify me with new updates
+                    </h1>
+                </div>
+                <div class="col-md-3 text-center ffbtn">
+                    <button id="fbtn">
+                        <a  href="form.html">Register.</a>
+                    </button>
+                </div>
+                <div class="">
+                    <hr class="bg-light" style="height: 2px; width: 95%; margin-left: 4px;">
+                </div>
+            </div>
+            <div class="row text-light">
+                <div class="col-md-3 col-sm-3 mt-5 ">
+                    <h1 class="text-light">
+                        G M Khan & Sons
+                    </h1>
+                    <h4 class="ficon">
+                        Follow us on : <br>
+                        <a href="https://instagram.com/khanjavaid24?igshid=MzRlODBiNWFlZA=="><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/profile.php?id=100040118042577&mibextid=ZbWKwL"><i class="fa-brands fa-facebook"></i></a>
+                        <a href=""><i class="fa-brands fa-twitter"></i></a>
+                        <a href="https://wa.me/919797987774?text=(%20G%20M%20Khan%20%26%20Sons%20)%0AWelcome%20%F0%9F%98%8AExcited%20to%20have%20you%20onboard.%20Let's%20connect%2C%20share%2C%20and%20grow%20together!%22%0A%0A%0A%0A%0A"><i class="fa-brands fa-whatsapp"></i></a>
+                        <a href="https://www.snapchat.com/add/khanjavaid24?share_id=uYuMIV8EN5A&locale=en-IN"><i class="fa-brands fa-snapchat"></i></a>
+                    </h4>
+                    <div class="faddr mt-5">
+                        <p>
+                            G M Khan & Sons Pvt Limited, <br>
+                            Area: Tengpora Bypass  Batamaloo <br>
+                            Near : Petrol Pump <br>
+                            City: Srinagar, <br>
+                            Pin: 190010, <br>
+                            For queries: <a href="tel:9707987774">+91-9707987774</a> / <a href="tel:6006378330">+91-6006378330, </a><br>
+                            For Consumer queries/complaints, <br>
+                            Email to -<a href="mailto:khanjavaid24@gmail.com">khanjavaid24@gmail.com</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-2 col-sm-2 mt-5 fp">
+                    <h5>
+                        Paints & Products
+                    </h5>
+                    <div>
+                        <hr style="width: 55%;">
+                    </div>
+                    <p><a href="interwallpaint.html">Interior Wall Paints</a></p>
+                    <p><a href="exteriorwallpaint.html">Exterior Wall Paints</a></p>
+                    <p><a href="woodcoating.html">Wood Coatings</a></p>
+                    <p><a href="mrtalenamel.html">Metal Enamel Paints</a></p>
+                    <p><a href="paintancillary.html">Paint Ancillary</a></p>
+                    <p><a href="nerofix.html">Adhesives</a></p>
+                    <p><a href="waterproof.html">Waterproofing</a></p>
+                    <p><a href="nxtgen.html">Nxtgen Painting Services</a></p>
+                </div>
+                <div class="col-md-2 col-sm-2 mt-5">
+                    <h5>
+                        Inspiration
+                    </h5>
+                    <div>
+                        <hr style="width: 40%;">
+                    </div>
+                    <div class="fp">
+                        <p><a href="styleguide.html">Interior Guides</a></p>
+                        <p><a href="exteriorstyleguide.html">Exterior Guides</a></p>
+                        <p><a href="blog.html">Blog</a></p>
+                        <p><a href="homepainttrends.html">Design Trends</a></p>
+                        <p><a href="prideofopulence.html">Ideas gallery</a></p>
+                    </div>
+                </div>
+                <div class="col-md-2 col-sm-2 mt-5">
+                    <h5>
+                        Tools
+                    </h5>
+                    <div class="hrr">
+                        <hr style="width: 30%;">
+                    </div>
+                    <div class="fp">
+                        <p><a href="nerolacknows.html">Nerolac Knows</a></p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-3 mt-5 fs-2">
+                    <a href=""><i class="fa-solid fa-location-dot text-light"></i></a>
+                    <span class="text-light">
+                        Location
+                    </span>
+                    <div>
+                        <hr style="width: 60%;">
+                    </div>
+                    <iframe id="location" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13220.623613231692!2d74.76825730077496!3d34.06551752176898!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38e1914ff5b3845b%3A0x2ea4d1179de85409!2sGM%20Khan%20%26%20Sons!5e0!3m2!1sen!2sin!4v1689733789914!5m2!1sen!2sin" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+            <div class="bg-dark text-light create fs-5 ficon">
+                <span class="">
+                    © 2023 G M Khan & Sons. Created by <a href="" class="ms-2">@_.Khan.Adnan</a>
+                </span>
+                <a href="https://instagram.com/dope_.spot?igshid=ZDdkNTZiNTM=" class="ms-3"><i class="fa-brands fa-instagram"></i></a>
+
+                <a href="https://www.facebook.com/profile.php?id=100066428925894&mibextid=ZbWKwL" class="ms-2"><i class="fa-brands fa-facebook"></i></a>
+
+                <a href="https://twitter.com/Khan_adnan01?t=9V74_HQnG-8yI5bXKmFL-w&s=35" class="ms-2"><i class="fa-brands fa-twitter"></i></a>
+                <a href="https://wa.link/qzyo61" class="ms-2"><i class="fa-brands fa-whatsapp"></i></a>
+
+                <a href="https://www.snapchat.com/add/ur_khanaddy?share_id=KQZN--QmGSc&locale=en-GB" class="ms-2"><i class="fa-brands fa-snapchat"></i></a>
+
+                <a href="https://www.linkedin.com/in/khan-adnan-9a39191b1" class="ms-2"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+        </div>
+        <style>
+            .create{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .create a{
+                text-decoration: none;
+                color: white;
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            }
+            span{
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            }
+            .hr{
+                display: flex;
+                justify-content: start;
+                align-items: center;
+            }
+
+        </style>
+    <!-- footer section end -->
+
+    <script>
+        window.addEventListener('scroll',demo);
+        function demo()
+        {
+            // alert("hi");
+            let reveal = document.querySelectorAll('.reveal');
+            for(let i=0;i<reveal.length;i++)
+        {
+            let windowheight = window.innerHeight;
+            console.log(windowheight,"<br>");
+            let revealTop = reveal[i].getBoundingClientRect().top;
+            console.log(revealTop);
+            let revealpoint = 70;
+
+            if(revealTop < windowheight - revealpoint)
+            {
+                reveal[i].classList.add('active');
+            }
+            else{
+                reveal[i].classList.remove('active');
+            }
+        }
+        }
+    </script>
+    
+</body>
+</html>
